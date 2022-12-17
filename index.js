@@ -7,6 +7,11 @@ function emailValidation() {
         document.getElementById("email-error").innerHTML = "Make sure email is more than 3 characters and has @ and a .";
         return false;
     } else {
+        document.getElementById("email-error").innerHTML = "";
+        isPasswordValid = passwordValidation();
+        if (isPasswordValid){
+            document.getElementById("final-check").innerHTML = "All good to go";
+        }
         return true;
     }
 }
@@ -19,6 +24,11 @@ function passwordValidation() {
         return false;
     }
     else {
+        document.getElementById("password-error").innerHTML = "";
+        isEmailValid = emailValidation();
+        if (isEmailValid){
+            document.getElementById("final-check").innerHTML = "All good to go";
+        }
         return true;
     }
 }
