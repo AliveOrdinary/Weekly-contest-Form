@@ -12,7 +12,7 @@ function emailValidation(isHtml = true) {
         if (isHtml === true) {
             isPasswordValid = passwordValidation(isHtml = false);
             if (isPasswordValid == true) {
-                document.getElementById("final-check").innerHTML = "All good to go";
+                document.getElementById("final-check").innerHTML = "All good to go!";
             }
         }
         return true;
@@ -34,7 +34,7 @@ function passwordValidation(isHtml = true) {
             isEmailValid = emailValidation(isHtml = false);
             if (isEmailValid == true) {
                 console.log("inside check")
-                document.getElementById("final-check").innerHTML = "All good to go";
+                document.getElementById("final-check").innerHTML = "All good to go!";
             }
         }
         return true;
